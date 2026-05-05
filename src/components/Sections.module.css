@@ -1,0 +1,204 @@
+.sections {
+  flex: 1;
+  min-width: 0;
+}
+
+.section {
+  scroll-margin-top: calc(var(--header-h) + 32px);
+  padding-bottom: 8px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.subHeading {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 24px 0 12px;
+  letter-spacing: -.01em;
+}
+
+/* Feature grid */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.featureCard {
+  background: var(--green-faint);
+  border: 1px solid #d4ecd6;
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: all var(--tr);
+}
+
+.featureCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--green-light);
+}
+
+.featureTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 4px;
+}
+
+.featureDesc {
+  font-size: 12.5px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* Storage hierarchy */
+.storageHierarchy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--gray-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-line);
+}
+
+.hierarchyRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hierarchyBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid var(--gray-line);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 200px;
+}
+
+.hierarchyBox span {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-faint);
+}
+
+.hierarchyArrow {
+  font-size: 18px;
+  color: var(--green-mid);
+  padding: 4px 18px;
+  font-weight: 300;
+}
+
+/* FAQ */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faqItem {
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.faqQ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 15px 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  transition: background var(--tr);
+}
+
+.faqQ:hover { background: var(--gray-bg); }
+
+.faqChevron {
+  font-size: 18px;
+  color: var(--gray-mid);
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+.faqA {
+  padding: 0 18px 16px;
+  font-size: 13.5px;
+  color: var(--text-soft);
+  line-height: 1.7;
+  border-top: 1px solid var(--gray-line);
+  padding-top: 14px;
+  animation: fadeIn .15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Glossary */
+.glossaryList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.glossaryItem {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--gray-line);
+  transition: background var(--tr);
+}
+
+.glossaryItem:last-child { border-bottom: none; }
+.glossaryItem:hover { background: var(--green-faint); }
+
+.glossaryTerm {
+  padding: 13px 16px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--green-dark);
+  border-right: 1px solid var(--gray-line);
+  background: var(--gray-bg);
+}
+
+.glossaryDef {
+  padding: 13px 16px;
+  font-size: 13.5px;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+@media (max-width: 600px) {
+  .glossaryItem { grid-template-columns: 1fr; }
+  .glossaryTerm { border-right: none; border-bottom: 1px solid var(--gray-line); }
+  .featureGrid  { grid-template-columns: 1fr 1fr; }
+}
