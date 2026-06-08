@@ -25,9 +25,9 @@ export function StepCard({ number, title, body, tip, warning, defaultOpen = fals
 /* ── Callout ── */
 export function Callout({ type = 'tip', children }) {
   const map = {
-    tip:     { cls: styles.calloutTip,     label: 'Note' },
+    tip: { cls: styles.calloutTip, label: 'Note' },
     warning: { cls: styles.calloutWarning, label: 'Important' },
-    info:    { cls: styles.calloutInfo,    label: 'Info' },
+    info: { cls: styles.calloutInfo, label: 'Info' },
   };
   const { cls, label } = map[type] || map.tip;
   return (
@@ -58,9 +58,9 @@ export function ScreenshotPlaceholder({ label }) {
       <div className={styles.screenshotInner}>
         <div className={styles.screenshotIcon}>
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <path d="M21 15l-5-5L5 21"/>
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <path d="M21 15l-5-5L5 21" />
           </svg>
         </div>
         <span className={styles.screenshotLabel}>{label}</span>
@@ -72,17 +72,31 @@ export function ScreenshotPlaceholder({ label }) {
 
 /* ── Video placeholder ── */
 export function VideoPlaceholder({ label, sub, youtubeUrl }) {
+  if (youtubeUrl) {
+    return (
+      <div style={{ margin: '20px 0', borderRadius: '12px', overflow: 'hidden', aspectRatio: '16/9' }}>
+        <iframe
+          width="100%"
+          height="100%"
+          src={youtubeUrl}
+          title={label}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ display: 'block' }}
+        />
+      </div>
+    );
+  }
+
+  // fallback placeholder shown when no URL is provided yet
   return (
-    <div
-      className={styles.video}
-      onClick={() => youtubeUrl && window.open(youtubeUrl, '_blank')}
-      style={{ cursor: youtubeUrl ? 'pointer' : 'default' }}
-    >
+    <div className={styles.video}>
       <div className={styles.videoOverlay} />
       <span className={styles.ytBadge}>YouTube</span>
       <div className={styles.playBtn}>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-          <path d="M8 5v14l11-7z"/>
+          <path d="M8 5v14l11-7z" />
         </svg>
       </div>
       <span className={styles.videoLabel}>{label}</span>
@@ -90,7 +104,6 @@ export function VideoPlaceholder({ label, sub, youtubeUrl }) {
     </div>
   );
 }
-
 /* ── Simple table ── */
 export function InfoTable({ headers, rows }) {
   return (

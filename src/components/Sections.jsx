@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import {
   StepCard, SectionHeading, VideoPlaceholder,
@@ -5,9 +6,7 @@ import {
 } from './Shared';
 import styles from './Sections.module.css';
 
-const STAFF_SECTIONS = ['add', 'update', 'tracking', 'storage', 'documents'];
-
-/* ── wrapper for each section anchor ── */
+/* ── section anchor wrapper ── */
 function Sec({ id, children }) {
   return (
     <section id={'section-' + id} className={styles.section}>
@@ -19,21 +18,21 @@ function Sec({ id, children }) {
 /* ── Overview ── */
 function OverviewSection() {
   const { t } = useApp();
-  const d = t;
   return (
     <Sec id="overview">
-      <SectionHeading title={d.overviewTitle} intro={d.overviewIntro} />
+      <SectionHeading title={t.overviewTitle} intro={t.overviewIntro} />
       <div className={styles.featureGrid}>
-        {d.overviewFeatures.map((f, i) => (
+        {t.overviewFeatures.map((f, i) => (
           <div key={i} className={styles.featureCard}>
             <div className={styles.featureTitle}>{f.title}</div>
             <div className={styles.featureDesc}>{f.desc}</div>
           </div>
         ))}
       </div>
-      <h3 className={styles.subHeading}>{d.rolesTableTitle}</h3>
-      <InfoTable headers={d.rolesTable.headers} rows={d.rolesTable.rows} />
-      <VideoPlaceholder label={d.videoLabel} sub={d.videoSub} />
+      <h3 className={styles.subHeading}>{t.rolesTableTitle}</h3>
+      <InfoTable headers={t.rolesTable.headers} rows={t.rolesTable.rows} />
+      <Callout type="info">{t.rolesTableNote}</Callout>
+      <VideoPlaceholder label={t.videoLabel} sub={t.videoSub} />
     </Sec>
   );
 }
@@ -46,14 +45,14 @@ function LoginSection() {
       <SectionHeading title={t.loginTitle} intro={t.loginIntro} />
       <div className={styles.steps}>
         {t.loginSteps.map((s, i) => (
-          <StepCard key={i} number={i + 1} title={s.title} body={s.body} tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
+          <StepCard key={i} number={i + 1} title={s.title} body={s.body}
+            tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
       <ScreenshotPlaceholder label={t.screenshotLoginLabel} />
     </Sec>
   );
 }
-
 
 /* ── Find File ── */
 function FindSection() {
@@ -63,12 +62,13 @@ function FindSection() {
       <SectionHeading title={t.findTitle} intro={t.findIntro} />
       <div className={styles.steps}>
         {t.findSteps.map((s, i) => (
-          <StepCard key={i} number={i + 1} title={s.title} body={s.body} tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
+          <StepCard key={i} number={i + 1} title={s.title} body={s.body}
+            tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
-      <h3 className={styles.subHeading} style={{ marginTop: 28 }}>File Status Guide</h3>
+      <h3 className={styles.subHeading}>{t.statusTableTitle}</h3>
       <InfoTable headers={t.statusTable.headers} rows={t.statusTable.rows} />
-      <ScreenshotPlaceholder label={t.screenshotLabel} />
+      <ScreenshotPlaceholder label={t.screenshotFindLabel} />
       <VideoPlaceholder label={t.videoFindLabel} sub={t.videoFindSub} />
     </Sec>
   );
@@ -82,7 +82,8 @@ function AddSection() {
       <SectionHeading title={t.addTitle} intro={t.addIntro} staffOnly staffLabel={t.staffOnly} />
       <div className={styles.steps}>
         {t.addSteps.map((s, i) => (
-          <StepCard key={i} number={i + 1} title={s.title} body={s.body} tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
+          <StepCard key={i} number={i + 1} title={s.title} body={s.body}
+            tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
       <ScreenshotPlaceholder label={t.screenshotAddLabel} />
@@ -99,7 +100,8 @@ function UpdateSection() {
       <SectionHeading title={t.updateTitle} intro={t.updateIntro} staffOnly staffLabel={t.staffOnly} />
       <div className={styles.steps}>
         {t.updateSteps.map((s, i) => (
-          <StepCard key={i} number={i + 1} title={s.title} body={s.body} tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
+          <StepCard key={i} number={i + 1} title={s.title} body={s.body}
+            tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
       <ScreenshotPlaceholder label={t.screenshotUpdateLabel} />
@@ -108,15 +110,31 @@ function UpdateSection() {
   );
 }
 
-/* ── Tracking ── */
+/* ── File Tracking ── */
 function TrackingSection() {
   const { t } = useApp();
   return (
     <Sec id="tracking">
       <SectionHeading title={t.trackingTitle} intro={t.trackingIntro} staffOnly staffLabel={t.staffOnly} />
+
+      {/* Status reference pills */}
+      <div className={styles.statusPills}>
+        {[
+          { label: t.lang === 'am' ? 'ይገኛል'    : 'Available', color: '#2e8b3f' },
+          { label: t.lang === 'am' ? 'ተዋሷል'    : 'Borrowed',  color: '#e08f10' },
+          { label: t.lang === 'am' ? 'ጠፍቷል'    : 'Missing',   color: '#c0392b' },
+          { label: t.lang === 'am' ? 'ተበላሽቷል'  : 'Damaged',   color: '#7f8c8d' },
+        ].map((s, i) => (
+          <span key={i} className={styles.statusPill} style={{ background: s.color }}>
+            {s.label}
+          </span>
+        ))}
+      </div>
+
       <div className={styles.steps}>
         {t.trackingSteps.map((s, i) => (
-          <StepCard key={i} number={i + 1} title={s.title} body={s.body} tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
+          <StepCard key={i} number={i + 1} title={s.title} body={s.body}
+            tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
       <ScreenshotPlaceholder label={t.screenshotTrackLabel} />
@@ -131,21 +149,24 @@ function StorageSection() {
   return (
     <Sec id="storage">
       <SectionHeading title={t.storageTitle} intro={t.storageIntro} staffOnly staffLabel={t.staffOnly} />
+
+      {/* 4-level hierarchy */}
       <div className={styles.storageHierarchy}>
-        {[
-          { label: t.lang === 'am' ? 'መደርደሪያ' : 'Shelf', sub: t.lang === 'am' ? 'ዋናው ማከማቻ' : 'Main storage unit' },
-          { label: t.lang === 'am' ? 'ረድፍ' : 'Row', sub: t.lang === 'am' ? 'አግዳሚ ደረጃ' : 'Horizontal level' },
-          { label: t.lang === 'am' ? 'ፎልደር' : 'Folder', sub: t.lang === 'am' ? 'አንድ ደንበኛ' : 'One customer' },
-        ].map((item, i, arr) => (
+        {t.storageHierarchy.map((item, i, arr) => (
           <div key={i} className={styles.hierarchyRow}>
-            <div className={styles.hierarchyBox}>{item.label}<span>{item.sub}</span></div>
+            <div className={styles.hierarchyBox}>
+              <span className={styles.hierarchyLabel}>{item.label}</span>
+              <span className={styles.hierarchySub}>{item.sub}</span>
+            </div>
             {i < arr.length - 1 && <div className={styles.hierarchyArrow}>↓</div>}
           </div>
         ))}
       </div>
+
       <div className={styles.steps}>
         {t.storageSteps.map((s, i) => (
-          <StepCard key={i} number={i + 1} title={s.title} body={s.body} tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
+          <StepCard key={i} number={i + 1} title={s.title} body={s.body}
+            tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
       <ScreenshotPlaceholder label={t.screenshotStorageLabel} />
@@ -153,23 +174,6 @@ function StorageSection() {
     </Sec>
   );
 }
-
-/* ── Documents ── */
-function DocumentsSection() {
-  const { t } = useApp();
-  return (
-    <Sec id="documents">
-      <SectionHeading title={t.documentsTitle} intro={t.documentsIntro} staffOnly staffLabel={t.staffOnly} />
-      <div className={styles.steps}>
-        {t.documentsSteps.map((s, i) => (
-          <StepCard key={i} number={i + 1} title={s.title} body={s.body} tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
-        ))}
-      </div>
-      <ScreenshotPlaceholder label={t.screenshotDocsLabel} />
-    </Sec>
-  );
-}
-
 
 /* ── FAQ ── */
 function FAQItem({ q, a }) {
@@ -217,9 +221,6 @@ function GlossarySection() {
   );
 }
 
-/* ── Missing useState import fix ── */
-import { useState } from 'react';
-
 /* ── Main export ── */
 export default function Sections() {
   const { role } = useApp();
@@ -233,11 +234,10 @@ export default function Sections() {
       <Divider />
       <FindSection />
       <Divider />
-      {!isViewer && <><AddSection /><Divider /></>}
+      {!isViewer && <><AddSection />   <Divider /></>}
       {!isViewer && <><UpdateSection /><Divider /></>}
       {!isViewer && <><TrackingSection /><Divider /></>}
       {!isViewer && <><StorageSection /><Divider /></>}
-      {!isViewer && <><DocumentsSection /><Divider /></>}
       <FAQSection />
       <Divider />
       <GlossarySection />
