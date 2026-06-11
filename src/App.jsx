@@ -42,7 +42,7 @@ export default function App() {
           <div className={styles.footerInner}>
             <span className={styles.footerOrg}>Ethiopian Electric Utility</span>
             <span className={styles.footerDot}>·</span>
-            <span>EEU Archive System — User Manual</span>
+            <span>EEU Portal <a href="https://www.eeu.gov.et" target="_blank" rel="noopener noreferrer">www.eeu.gov.et</a></span>
             <span className={styles.footerDot}>·</span>
             <span>Internal use only</span>
           </div>

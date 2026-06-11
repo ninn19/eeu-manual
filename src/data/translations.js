@@ -86,13 +86,13 @@ export const translations = {
       },
       {
         title: "Change your password",
-        body: "Click your name at the top right and select Change Password. Enter your current password, then your new password twice. Click Save. Use a strong password of at least 8 characters.",
-        tip: "Change your password the first time you log in, especially if your admin set a temporary one for you.",
-        warning: null,
+        body: "Click your name at the bottom left and select Change Password. Enter your current password, then your new password twice. Click Save. Use a strong password of at least 8 characters.",
+        tip: "You can also change the theme from the user menu.",
+        warning: "Change your password the first time you log in, especially if your admin set a temporary one for you.",
       },
       {
         title: "Log out",
-        body: "Click your name at the top right and select Logout. Always log out on shared computers, do not just close the browser tab.",
+        body: "Click your name at the bottom left and select Logout. Always log out on shared computers, do not just close the browser tab.",
         tip: null,
         warning: "Closing the browser without logging out leaves your session open on shared computers.",
       },
@@ -104,8 +104,8 @@ export const translations = {
     findIntro: "Locate any customer's physical folder without going to the archive room. Available to all users.",
     findSteps: [
       {
-        title: "Open Customer Search",
-        body: "From the left menu click Customers. The search page opens with a search bar at the top.",
+        title: "Open Search",
+        body: "From the left menu click Search (it's the main dashboard when you first open the system). The search page opens with a search bar at the top.",
         tip: null, warning: null,
       },
       {
@@ -117,11 +117,12 @@ export const translations = {
       {
         title: "Click on a result",
         body: "Click the customer's name in the list. Their profile opens showing the full physical location, current status, number of documents, and borrow history.",
-        tip: null, warning: null,
+        tip: "If you don't see the customer you're looking for, you can filter based on their status (Available, Borrowed, Missing, Damaged) or CA number only BP number only or both .",
+        warning: null,
       },
       {
         title: "Read the file location",
-        body: "Location is shown as: Institution → Shelf → Row → Folder. For example: Addis Ababa Branch → Shelf A → Row 3 → Folder 12. These labels match the physical tags in the archive room.",
+        body: "Location is shown as: Institution → Shelf → Row → Folder. For example: Bahir Dar Branch → Shelf A → Row 3 → Folder 12. These labels match the physical tags in the archive room.",
         tip: null, warning: null,
       },
     ],
@@ -144,25 +145,30 @@ export const translations = {
     addIntro: "Register a new customer and assign their physical folder a location in the system. Archive Staff only.",
     addSteps: [
       {
-        title: "Go to Customers and click Add",
-        body: "From the left menu click Customers, then click the Add Customer button at the top right.",
-        tip: null, warning: null,
+        title: "Quick Add",
+        body: "From the main dashboard there is a floating Add Customer button at the bottom right, click the Add Customer button at the bottom right.",
+        tip: "The Quick Add button could be found on every page.", warning: null,
       },
       {
         title: "Enter customer details",
-        body: "Fill in the customer's full name, BP number, and CA number. All three are required. Add the number of physical documents in the folder in the Document Count field.",
-        tip: null,
+        body: "Go to the customer options and fill in the customer's full name, BP number, and CA number. All three are required. Add the number of physical documents in the folder in the Document Count field.",
+        tip: "You can also create shelf, row, and folder locations from this form if you need to.",
         warning: "Double-check both the BP number and CA number before saving. Errors in these fields affect searchability for all staff.",
       },
       {
         title: "Assign a storage location",
-        body: "Select the Institution (branch), then the Shelf, Row, and Folder from the dropdown menus. If the folder does not exist yet, go to Storage first and create it.",
-        tip: null, warning: null,
+        body: "Select the Shelf, Row, and Folder from the dropdown menus. If the folder does not exist yet, go to Storage first and create it.",
+        tip: "", warning: null,
       },
       {
         title: "Save the record",
         body: "Click Save. The customer now appears in all search results and the folder is linked to their record. Status is set to Available automatically.",
         tip: null, warning: null,
+      },
+      {
+        title: "Other ways to add a customer",
+        body: "You can also add a customer from the Storage page. Choose Institution. Then open the relevant Shelf(or you can add one at the top right corner there is an add shelf button).Then choose Row(or you can add one at the top right corner there is an add row button). In that row choose the relevant Folder(or you can add one at the top right corner there is an add folder button) and click Add Customer. This links the new customer to that folder immediately.",
+        tip: "You can also Bulk Import customers that belong in the same folder.", warning: null,
       },
     ],
     screenshotAddLabel: "Screenshot Add Customer form",
@@ -185,9 +191,15 @@ export const translations = {
       },
       {
         title: "Make your changes",
-        body: "Update the name, BP number, CA number, document count, or storage location as needed. To move a file, change the Institution, Shelf, Row, or Folder fields.",
+        body: "Update the name, BP number, CA number or document count as needed.",
         tip: null,
-        warning: "If you physically move a folder to a new shelf location, update the system immediately, other staff are relying on this to find the file.",
+        warning: "Make sure to update the system immediately, other staff are relying on this to find the file.",
+      },
+      {
+        title: "Move to a new location",
+        body: "To move a file, change the Institution, Shelf, Row, or Folder fields.",
+        tip: null,
+        warning: "After you physically move a folder to a new shelf location, update the system immediately, other staff are relying on this to find the file.",
       },
       {
         title: "Save",
