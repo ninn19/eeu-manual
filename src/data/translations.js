@@ -37,10 +37,10 @@ export const translations = {
 
     // ── Overview ──────────────────────────────────────────────────────────────
     overviewTitle: "System Overview",
-    overviewIntro: "The EEU Archive System indexes physical customer document folders so any authorised staff member can locate a file in seconds — without walking to the archive room first. It tracks every file movement and makes the status of every folder visible across all branches.",
+    overviewIntro: "The EEU Archive System indexes physical customer document folders so any authorised staff member can locate a file in seconds, without walking to the archive room first. It tracks every file movement and makes the status of every folder visible across all branches.",
     overviewFeatures: [
       { title: "Find Files Fast",      desc: "Search by customer name, BP number, or CA number instantly." },
-      { title: "Four File Statuses",   desc: "Available, Borrowed, Missing, or Damaged — always visible." },
+      { title: "Four File Statuses",   desc: "Available, Borrowed, Missing, or Damaged are always visible." },
       { title: "Full Location Map",    desc: "Institution → Shelf → Row → Folder hierarchy." },
       { title: "Track Every Movement", desc: "Who borrowed a file, when, and when it was returned." },
       { title: "Branch Access",        desc: "Any authorised branch can search without going to the archive." },
@@ -75,7 +75,7 @@ export const translations = {
       },
       {
         title: "Enter your username and password",
-        body: "Type your username and password and click Login. The system uses a secure cookie — you do not need to do anything extra after logging in.",
+        body: "Type your username and password and click Login. The system uses a secure cookie, you do not need to do anything extra after logging in.",
         tip: null,
         warning: "After 5 failed login attempts your account is locked for 15 minutes automatically. Wait and try again, or contact your admin.",
       },
@@ -92,12 +92,12 @@ export const translations = {
       },
       {
         title: "Log out",
-        body: "Click your name at the top right and select Logout. Always log out on shared computers — do not just close the browser tab.",
+        body: "Click your name at the top right and select Logout. Always log out on shared computers, do not just close the browser tab.",
         tip: null,
         warning: "Closing the browser without logging out leaves your session open on shared computers.",
       },
     ],
-    screenshotLoginLabel: "Screenshot — Login screen",
+    screenshotLoginLabel: "Screenshot Login screen",
 
     // ── Find File ─────────────────────────────────────────────────────────────
     findTitle: "Find a File",
@@ -110,7 +110,7 @@ export const translations = {
       },
       {
         title: "Type a name, BP number, or CA number",
-        body: "Enter any of the three: the customer's full name, their BP number (Business Partner), or their CA number (Customer Account — printed on bills and receipts). Results appear instantly as you type.",
+        body: "Enter any of the three: the customer's full name, their BP number (Business Partner), or their CA number (Customer Account, printed on bills and receipts). Results appear instantly as you type.",
         tip: "CA number is what most customers know from their bill. BP number is the internal archive reference. Either works.",
         warning: null,
       },
@@ -121,7 +121,7 @@ export const translations = {
       },
       {
         title: "Read the file location",
-        body: "Location is shown as: Institution — Shelf — Row — Folder. For example: Addis Ababa Branch — Shelf A — Row 3 — Folder 12. These labels match the physical tags in the archive room.",
+        body: "Location is shown as: Institution → Shelf → Row → Folder. For example: Addis Ababa Branch → Shelf A → Row 3 → Folder 12. These labels match the physical tags in the archive room.",
         tip: null, warning: null,
       },
     ],
@@ -135,8 +135,8 @@ export const translations = {
         ["Damaged",   "File exists but is in poor condition.", "Handle with care. Staff will advise on next steps."],
       ],
     },
-    screenshotFindLabel: "Screenshot — Customer search page",
-    videoFindLabel: "Find a File — Walkthrough",
+    screenshotFindLabel: "Screenshot Customer search page",
+    videoFindLabel: "Find a File Walkthrough",
     videoFindSub:  "How to search by name, BP number, and CA number",
 
     // ── Add File ──────────────────────────────────────────────────────────────
@@ -165,13 +165,13 @@ export const translations = {
         tip: null, warning: null,
       },
     ],
-    screenshotAddLabel: "Screenshot — Add Customer form",
-    videoAddLabel: "Add a File — Walkthrough",
+    screenshotAddLabel: "Screenshot Add Customer form",
+    videoAddLabel: "Add a File Walkthrough",
     videoAddSub:  "How to register a new customer and assign a folder location",
 
     // ── Update File ───────────────────────────────────────────────────────────
     updateTitle: "Update a File",
-    updateIntro: "Edit an existing customer record — correct details, update document count, or move the folder to a new location. Archive Staff only.",
+    updateIntro: "Edit an existing customer record, correct details, update document count, or move the folder to a new location. Archive Staff only.",
     updateSteps: [
       {
         title: "Find the customer",
@@ -187,7 +187,7 @@ export const translations = {
         title: "Make your changes",
         body: "Update the name, BP number, CA number, document count, or storage location as needed. To move a file, change the Institution, Shelf, Row, or Folder fields.",
         tip: null,
-        warning: "If you physically move a folder to a new shelf location, update the system immediately — other staff are relying on this to find the file.",
+        warning: "If you physically move a folder to a new shelf location, update the system immediately, other staff are relying on this to find the file.",
       },
       {
         title: "Save",
@@ -195,8 +195,8 @@ export const translations = {
         tip: null, warning: null,
       },
     ],
-    screenshotUpdateLabel: "Screenshot — Edit Customer form",
-    videoUpdateLabel: "Update a File — Walkthrough",
+    screenshotUpdateLabel: "Screenshot Edit Customer form",
+    videoUpdateLabel: "Update a File Walkthrough",
     videoUpdateSub:  "How to edit a customer record and move a folder",
 
     // ── Tracking ──────────────────────────────────────────────────────────────
@@ -211,14 +211,14 @@ export const translations = {
       {
         title: "Return a file",
         body: "Open the customer profile (search by name, BP, or CA). Click Mark as Returned. The status goes back to Available. Place the physical folder back in the correct location on the shelf.",
-        tip: "Update the system the moment the folder is physically returned — not at the end of the day. Other branches may be waiting on this file.",
+        tip: "Update the system the moment the folder is physically returned not at the end of the day. Other branches may be waiting on this file.",
         warning: null,
       },
       {
         title: "Mark a file as missing",
         body: "If the folder is not on the shelf and not showing as Borrowed, open the customer profile and click Mark as Missing. This immediately changes the status to Missing and makes it visible to all staff.",
         tip: null,
-        warning: "Before marking as missing, check the Borrowed status on the profile — someone may have borrowed it without updating the system.",
+        warning: "Before marking as missing, check the Borrowed status on the profile, someone may have borrowed it without updating the system.",
       },
       {
         title: "Mark a file as damaged",
@@ -231,8 +231,8 @@ export const translations = {
         tip: null, warning: null,
       },
     ],
-    screenshotTrackLabel: "Screenshot — Customer profile showing file status and borrow history",
-    videoTrackLabel: "File Tracking — Walkthrough",
+    screenshotTrackLabel: "Screenshot Customer profile showing file status and borrow history",
+    videoTrackLabel: "File Tracking Walkthrough",
     videoTrackSub:  "Borrow, return, mark missing, and mark damaged",
 
     // ── Storage ───────────────────────────────────────────────────────────────
@@ -252,9 +252,9 @@ export const translations = {
       },
       {
         title: "Add a new shelf, row, or folder",
-        body: "Inside the relevant level, click the Add button. Enter the name and any BP/CA number range label. Use a consistent naming convention agreed with your team — for example Shelf-A, Shelf-B or Row-01, Row-02.",
+        body: "Inside the relevant level, click the Add button. Enter the name and any BP/CA number range label. Use a consistent naming convention agreed with your team, for example Shelf-A, Shelf-B or Row-01, Row-02.",
         tip: null,
-        warning: "Rows are labelled with BP/CA number ranges (e.g. AD1000–AD1100). Set these ranges carefully — they are how staff know which row to look in without opening the system.",
+        warning: "Rows are labelled with BP/CA number ranges (e.g. AD1000–AD1100). Set these ranges carefully, they are how staff know which row to look in without opening the system.",
       },
       {
         title: "Generate and print a QR code",
@@ -263,8 +263,8 @@ export const translations = {
         warning: null,
       },
     ],
-    screenshotStorageLabel: "Screenshot — Storage hierarchy view",
-    videoStorageLabel: "Storage & QR Codes — Walkthrough",
+    screenshotStorageLabel: "Screenshot Storage hierarchy view",
+    videoStorageLabel: "Storage & QR Codes Walkthrough",
     videoStorageSub:  "Navigate the hierarchy and generate QR codes",
 
     // ── FAQ ───────────────────────────────────────────────────────────────────
@@ -292,11 +292,11 @@ export const translations = {
       },
       {
         q: "What is the difference between BP number and CA number?",
-        a: "BP (Business Partner) is the internal archive reference number. CA (Customer Account) is the number printed on the customer's bill and receipts — it is what most customers know. Both are searchable and both are recorded for each customer.",
+        a: "BP (Business Partner) is the internal archive reference number. CA (Customer Account) is the number printed on the customer's bill and receipts, it is what most customers know. Both are searchable and both are recorded for each customer.",
       },
       {
         q: "I cannot click some buttons. Why?",
-        a: "You are logged in as a Viewer. Viewers can only read information — they cannot add, edit, borrow, or change statuses. Contact your Admin if you need a higher access level.",
+        a: "You are logged in as a Viewer. Viewers can only read information, they cannot add, edit, borrow, or change statuses. Contact your Admin if you need a higher access level.",
       },
       {
         q: "The system is slow or not loading.",
@@ -307,8 +307,8 @@ export const translations = {
     // ── Glossary ──────────────────────────────────────────────────────────────
     glossaryTitle: "Glossary",
     glossaryItems: [
-      { term: "BP Number",    def: "Business Partner number — internal archive reference ID for each customer." },
-      { term: "CA Number",    def: "Customer Account number — printed on bills and receipts, familiar to most customers." },
+      { term: "BP Number",    def: "Business Partner number internal archive reference ID for each customer." },
+      { term: "CA Number",    def: "Customer Account number printed on bills and receipts, familiar to most customers." },
       { term: "Institution",  def: "A branch or office. The top level of the storage hierarchy." },
       { term: "Shelf",        def: "A physical storage unit inside an institution holding multiple rows." },
       { term: "Row",          def: "A horizontal level on a shelf, labelled with a BP/CA number range." },
@@ -319,7 +319,7 @@ export const translations = {
       { term: "Damaged",      def: "The folder exists but is in poor physical condition." },
       { term: "QR Code",      def: "A square barcode sticker on a folder, scannable with any phone camera." },
       { term: "Archive Staff",def: "A user with full access to manage, track, and update files." },
-      { term: "Viewer",       def: "A user who can search and read records only — no changes allowed." },
+      { term: "Viewer",       def: "A user who can search and read records only, no changes allowed." },
       { term: "Admin",        def: "A user who can manage other users' accounts and roles." },
       { term: "Dashboard",    def: "The main page shown after logging in." },
       { term: "Audit Trail",  def: "An automatic log of every action taken in the system." },
@@ -425,14 +425,14 @@ export const translations = {
         warning: "ብሮውዘሩ ሳይወጡ ከዘጉ አካውንቱ ለሌሎቹ ክፍት ሆኖ ይቀራል።",
       },
     ],
-    screenshotLoginLabel: "ቅጽበታዊ ምስል — ወደ መተግበሪያው መግቢያ ገጽ",
+    screenshotLoginLabel: "ቅጽበታዊ ምስል ወደ መተግበሪያው መግቢያ ገጽ",
 
     findTitle: "ፋይል ፈልግ",
-    findIntro: "ወደ ማህደሩ ሳትሄዱ የማንኛውም ደንበኛ ፊዚካዊ ፎልደር ቦታ ለማግኘት ይጠቀሙ። ለሁሉም ተጠቃሚዎች ይገኛል።",
+    findIntro: "ወደ መዝገብ ቤቱ ሳይሄዱ የማንኛውንም ደንበኛ በአካል የሚገኝበትን ፎልደር ቦታ ለማግኘት ይጠቀሙ። ለሁሉም የመተግበሪያው ተጠቃሚዎች።",
     findSteps: [
       {
-        title: "ደንበኛ ፍለጋ ክፈት",
-        body: "ከግራ ምናሌ 'ደንበኞች' ጠቅ ያድርጉ። የፍለጋ ገጽ ከላይ ባለ የፍለጋ ሳጥን ይከፈታል።",
+        title: "የደንበኛ ፋይል ለመፈለግ",
+        body: "ከግራ ሜኑ 'Customers' የሚለውን ይጫኑ። የፍለጋ ገጽ ከላይ ባለ የፍለጋ ሳጥን ይከፈታል።",
         tip: null, warning: null,
       },
       {
@@ -442,13 +442,13 @@ export const translations = {
         warning: null,
       },
       {
-        title: "ውጤት ጠቅ ያድርጉ",
-        body: "ከዝርዝሩ ውስጥ የደንበኛውን ስም ጠቅ ያድርጉ። መገለጫ ገጹ ሙሉ ቦታ፣ ሁኔታ፣ ሰነዶች ብዛት እና የማበደር ታሪክ ያሳያል።",
+        title: "የመጣውን ውጤት ይጫኑ",
+        body: "ከዝርዝሩ ውስጥ የደንበኛውን ስም ይጫኑ። መገለጫ ገጹ ሙሉ ቦታ፣ ሁኔታ፣ ሰነዶች ብዛት እና የማበደር ታሪክ ያሳያል።",
         tip: null, warning: null,
       },
       {
         title: "የፋይሉን ቦታ ያንብቡ",
-        body: "ቦታው እንደዚህ ይታያል፦ ተቋም — መደርደሪያ — ረድፍ — ፎልደር። ለምሳሌ፦ አዲስ አበባ ቅርንጫፍ — መደርደሪያ-ሀ — ረድፍ 3 — ፎልደር 12።",
+        body: "ቦታው እንደዚህ ይታያል፦ ተቋም → መደርደሪያ → ረድፍ → ፎልደር። ለምሳሌ፦ አዲስ አበባ ቅርንጫፍ → መደርደሪያ-ሀ → ረድፍ 3 → ፎልደር 12።",
         tip: null, warning: null,
       },
     ],
@@ -462,8 +462,8 @@ export const translations = {
         ["ተበላሽቷል", "ፋይሉ ይገኛል ግን ሁኔታው ደካማ ነው።",                  "በጥንቃቄ ያዙ። ሰራተኛ ምክር ይሰጣቸዋል።"],
       ],
     },
-    screenshotFindLabel: "ቅጽበታዊ ምስል — ደንበኛ ፍለጋ ገጽ",
-    videoFindLabel: "ፋይል ፈልግ — ቪዲዮ",
+    screenshotFindLabel: "ቅጽበታዊ ምስል ደንበኛ ፍለጋ ገጽ",
+    videoFindLabel: "ፋይል ፈልግ ቪዲዮ",
     videoFindSub:  "በስም፣ BP ቁጥር እና CA ቁጥር እንዴት እንደሚፈለግ",
 
     addTitle: "ፋይል ጨምር",
@@ -476,7 +476,7 @@ export const translations = {
       },
       {
         title: "የደንበኛ ዝርዝሮች ያስገቡ",
-        body: "ሙሉ ስም፣ BP ቁጥር እና CA ቁጥር ያስገቡ — ሦስቱም አስፈላጊ ናቸው። የሰነዶቹ ብዛት (numOfDocs) ያስገቡ።",
+        body: "ሙሉ ስም፣ BP ቁጥር እና CA ቁጥር ያስገቡ ሦስቱም አስፈላጊ ናቸው። የሰነዶቹ ብዛት (numOfDocs) ያስገቡ።",
         tip: null,
         warning: "BP ቁጥሩን እና CA ቁጥሩን ከማስቀመጥዎ በፊት ደግሞ ያረጋግጡ። ስህተቶቹ ለሁሉም ሰራተኞቹ ፍለጋ ያስቸግራሉ።",
       },
@@ -491,20 +491,20 @@ export const translations = {
         tip: null, warning: null,
       },
     ],
-    screenshotAddLabel: "ቅጽበታዊ ምስል — ደንበኛ ጨምር ቅጽ",
-    videoAddLabel: "ፋይል ጨምር — ቪዲዮ",
+    screenshotAddLabel: "ቅጽበታዊ ምስል ደንበኛ ጨምር ቅጽ",
+    videoAddLabel: "ፋይል ጨምር ቪዲዮ",
     videoAddSub:  "አዲስ ደንበኛ እንዴት እንደሚመዘገብ እና ፎልደር እንደሚሰጥ",
 
     updateTitle: "ፋይል አዘምን",
-    updateIntro: "ያለ የደንበኛ መዝገብ ቀይሩ — ዝርዝሮቹን አስተካክሉ፣ ሰነዶቹ ብዛት ቀይሩ፣ ወይም ፎልደሩን አዲስ ቦታ ያዛውሩ። ለማህደር ሰራተኛ ብቻ።",
+    updateIntro: "ያለ የደንበኛ መዝገብ ቀይሩ ዝርዝሮቹን አስተካክሉ፣ ሰነዶቹ ብዛት ቀይሩ፣ ወይም ፎልደሩን አዲስ ቦታ ያዛውሩ። ለማህደር ሰራተኛ ብቻ።",
     updateSteps: [
       { title: "ደንበኛ ፈልጉ",          body: "ደንበኛ ፍለጋ ተጠቅሞ የደንበኛው መገለጫ ገጽ ይክፈቱ።",                                                                              tip: null, warning: null },
       { title: "ያርትዑ ጠቅ ያድርጉ",      body: "በመገለጫ ገጹ ላይ 'ያርትዑ' ቁልፍ ጠቅ ያድርጉ። ቅጹ ወቅታዊ ዋጋዎቹ ተሞልተው ይከፈታሉ።",                                                   tip: null, warning: null },
-      { title: "ለውጦቹ ያድርጉ",         body: "ስሙን፣ BP ቁጥሩን፣ CA ቁጥሩን፣ ሰነዶቹ ብዛት ወይም ቦታውን እንደሚያስፈልግ ቀይሩ። ፋይሉን ለማዛወር ተቋሙን፣ መደርደሪያ፣ ረድፍ ወይም ፎልደሩ ቀይሩ።", tip: null, warning: "ፊዚካዊ ፎልደሩን አዲስ ቦታ ካዛወሩ ስርዓቱን ወዲያው ያዘምኑ — ሌሎቹ ቅርንጫፎቹ ፋይሉን ለማግኘት ስርዓቱን ይጠቀማሉ።" },
+      { title: "ለውጦቹ ያድርጉ",         body: "ስሙን፣ BP ቁጥሩን፣ CA ቁጥሩን፣ ሰነዶቹ ብዛት ወይም ቦታውን እንደሚያስፈልግ ቀይሩ። ፋይሉን ለማዛወር ተቋሙን፣ መደርደሪያ፣ ረድፍ ወይም ፎልደሩ ቀይሩ።", tip: null, warning: "ፊዚካዊ ፎልደሩን አዲስ ቦታ ካዛወሩ ስርዓቱን ወዲያው ያዘምኑ ሌሎቹ ቅርንጫፎቹ ፋይሉን ለማግኘት ስርዓቱን ይጠቀማሉ።" },
       { title: "ያስቀምጡ",              body: "ያስቀምጡ ጠቅ ያድርጉ። ሁሉም ለውጦች ስርዓቱ ቅፅ ታሪክ ውስጥ ይመዘገባሉ።",                                                               tip: null, warning: null },
     ],
-    screenshotUpdateLabel: "ቅጽበታዊ ምስል — ደንበኛ ያርትዑ ቅጽ",
-    videoUpdateLabel: "ፋይል አዘምን — ቪዲዮ",
+    screenshotUpdateLabel: "ቅጽበታዊ ምስል ደንበኛ ያርትዑ ቅጽ",
+    videoUpdateLabel: "ፋይል አዘምን ቪዲዮ",
     videoUpdateSub:  "ሰነዶቹን እና ቦታውን እንዴት እንደሚቀየር",
 
     trackingTitle: "ፋይል ክትትል",
@@ -518,14 +518,14 @@ export const translations = {
       {
         title: "ፋይልን መልሱ",
         body: "የደንበኛ መገለጫ ከፍቱ (ስም፣ BP ወይም CA ፈልጉ)። 'ተመልሷል ምልክት ያድርጉ' ጠቅ ያድርጉ። ሁኔታው 'ይገኛል' ይሆናል። ፊዚካዊ ፎልደሩ ትክክለኛ ቦታ ይመልሱ።",
-        tip: "ፊዚካዊ ፎልደሩ ሲመለስ ወዲያው ስርዓቱ ያዘምኑ — ሌሎቹ ቅርንጫፎቹ ፋይሉን ሊፈልጉ ይችላሉ።",
+        tip: "ፊዚካዊ ፎልደሩ ሲመለስ ወዲያው ስርዓቱ ያዘምኑ ሌሎቹ ቅርንጫፎቹ ፋይሉን ሊፈልጉ ይችላሉ።",
         warning: null,
       },
       {
         title: "የጠፋ ፋይል ሪፖርት ያድርጉ",
         body: "ፋይሉ ባለ ቦታ ካልተገኘ፣ 'ተዋሷል' ካልተምለከተ፣ 'ጠፍቷል ምልክት ያድርጉ' ጠቅ ያድርጉ። ሁኔታው ለሁሉም ቅርንጫፎቹ ወዲያው ይታያሉ።",
         tip: null,
-        warning: "ቅድሚያ 'ተዋሷል' ሁኔታ ያረጋግጡ — ቀዳሚ ሰው ሳይዘምን ወስዶ ሊሆን ይችላል።",
+        warning: "ቅድሚያ 'ተዋሷል' ሁኔታ ያረጋግጡ ቀዳሚ ሰው ሳይዘምን ወስዶ ሊሆን ይችላል።",
       },
       {
         title: "የተበላሸ ፋይል ሪፖርት ያድርጉ",
@@ -538,8 +538,8 @@ export const translations = {
         tip: null, warning: null,
       },
     ],
-    screenshotTrackLabel: "ቅጽበታዊ ምስል — ደንበኛ መገለጫ ፋይሉ ሁኔታ እና ታሪክ",
-    videoTrackLabel: "ፋይል ክትትል — ቪዲዮ",
+    screenshotTrackLabel: "ቅጽበታዊ ምስል ደንበኛ መገለጫ ፋይሉ ሁኔታ እና ታሪክ",
+    videoTrackLabel: "ፋይል ክትትል ቪዲዮ",
     videoTrackSub:  "ፋይሎችን አዋሱ፣ መልሱ፣ ጠፍቷል እና ተበላሽቷል ምልክት ያድርጉ",
 
     storageTitle: "ማህደር እና QR ኮዶች",
@@ -547,20 +547,20 @@ export const translations = {
     storageHierarchy: [
       { label: "ተቋም",      sub: "ቅርንጫፍ ወይም ቢሮ" },
       { label: "መደርደሪያ",  sub: "ፊዚካዊ ማከማቻ ክፍል" },
-      { label: "ረድፍ",     sub: "አግዳሚ ደረጃ — በ BP/CA ቁጥር ክልል የሰፈሩ" },
-      { label: "ፎልደር",   sub: "ንዑስ ክልል — አንድ ደንበኛ ይዟል" },
+      { label: "ረድፍ",     sub: "አግዳሚ ደረጃ በ BP/CA ቁጥር ክልል የሰፈሩ" },
+      { label: "ፎልደር",   sub: "ንዑስ ክልል አንድ ደንበኛ ይዟል" },
     ],
     storageSteps: [
       {
         title: "የማህደሩ ተዋረድ ያስሱ",
-        body: "ከግራ ምናሌ 'ማህደር' ሂዱ። ተቋም ይምረጡ — ያሉት መደርደሪያዎቹ ይታያሉ። መደርደሪያ ጠቅ ያድርጉ — ረድፎቹ ይታያሉ። ረድፍ ጠቅ ያድርጉ — ፎልደሮቹ ይታያሉ።",
+        body: "ከግራ ምናሌ 'ማህደር' ሂዱ። ተቋም ይምረጡ ያሉት መደርደሪያዎቹ ይታያሉ። መደርደሪያ ጠቅ ያድርጉ ረድፎቹ ይታያሉ። ረድፍ ጠቅ ያድርጉ ፎልደሮቹ ይታያሉ።",
         tip: null, warning: null,
       },
       {
         title: "አዲስ መደርደሪያ፣ ረድፍ ወይም ፎልደር ጨምሩ",
-        body: "ከተዛማጅ ደረጃ 'ጨምር' ቁልፍ ጠቅ ያድርጉ። ስሙ እና የ BP/CA ቁጥር ክልሉ ያስገቡ። ወጥ ምልክት ይጠቀሙ — ለምሳሌ መደርደሪያ-ሀ፣ ረድፍ-01።",
+        body: "ከተዛማጅ ደረጃ 'ጨምር' ቁልፍ ጠቅ ያድርጉ። ስሙ እና የ BP/CA ቁጥር ክልሉ ያስገቡ። ወጥ ምልክት ይጠቀሙ ለምሳሌ መደርደሪያ-ሀ፣ ረድፍ-01።",
         tip: null,
-        warning: "ረድፎቹ የ BP/CA ቁጥር ክልሎቻቸው (ለምሳሌ AD1000–AD1100) ትክክለኛ ይሁን — ሰራተኞቹ ስርዓቱ ሳይከፍቱ ትክክለኛ ረድፍ ለማግኘት ምልክቱን ይጠቀማሉ።",
+        warning: "ረድፎቹ የ BP/CA ቁጥር ክልሎቻቸው (ለምሳሌ AD1000–AD1100) ትክክለኛ ይሁን ሰራተኞቹ ስርዓቱ ሳይከፍቱ ትክክለኛ ረድፍ ለማግኘት ምልክቱን ይጠቀማሉ።",
       },
       {
         title: "QR ኮድ ፍጠሩ እና ያትሙ",
@@ -569,8 +569,8 @@ export const translations = {
         warning: null,
       },
     ],
-    screenshotStorageLabel: "ቅጽበታዊ ምስል — የማህደር ተዋረድ እይታ",
-    videoStorageLabel: "ማህደር እና QR ኮድ — ቪዲዮ",
+    screenshotStorageLabel: "ቅጽበታዊ ምስል የማህደር ተዋረድ እይታ",
+    videoStorageLabel: "ማህደር እና QR ኮድ ቪዲዮ",
     videoStorageSub:  "ተዋረዱን ያስሱ እና QR ኮዶች ይፍጠሩ",
 
     faqTitle: "በተደጋጋሚ የሚጠየቁ ጥያቄዎች",
@@ -580,29 +580,29 @@ export const translations = {
       { q: "ፈልጌው የደንበኛ ስሙ አይታይም። ለምን?",                          a: "ደንበኛው ወደ ስርዓቱ ላልጨመር ሊሆን ይችላል። ሦስቱንም ፍለጋ ቁልፎች ሞክሩ (ስም፣ BP፣ CA)። ካልተገኘ Admin ያነጋግሩ።" },
       { q: "ፋይሉ 'ተዋሷል' ይላል ግን ፊቴ ሊ ነው።",                        a: "የደንበኛ መገለጫ ከፍቶ 'ተመልሷል ምልክት ያድርጉ' ጠቅ ያድርጉ። ቀዳሚ ሰው ስርዓቱን ማዘምን ዘነጋ።" },
       { q: "ፋይሉ ማን ወሰደ እና መቼ ማወቅ ይቻላል?",                         a: "'ተዋሷል' ሁኔታ ሲሆን የደንበኛ መገለጫ ላይ የሰውዬው ስምና ቀን ይታያሉ።" },
-      { q: "BP ቁጥር እና CA ቁጥር ምን ልዩነት አለ?",                        a: "BP (Business Partner) ውስጣዊ የማህደር ማጣቀሻ ቁጥር ነው። CA (Customer Account) በሂሳብ ደረሰኝ ላይ ያለ ቁጥር ነው — አብዛኛዎቹ ደንበኞች ያውቁታል። ሁለቱም ፍለጋ ይሰራሉ።" },
+      { q: "BP ቁጥር እና CA ቁጥር ምን ልዩነት አለ?",                        a: "BP (Business Partner) ውስጣዊ የማህደር ማጣቀሻ ቁጥር ነው። CA (Customer Account) በሂሳብ ደረሰኝ ላይ ያለ ቁጥር ነው አብዛኛዎቹ ደንበኞች ያውቁታል። ሁለቱም ፍለጋ ይሰራሉ።" },
       { q: "አንዳንድ ቁልፎች ሊጠቅቁ አይቻልም። ለምን?",                        a: "ሚናዎ 'ተመልካች' ሊሆን ይችላል። ተመልካቾች ብቻ ያነባሉ። ሊቀይሩ ከፈለጉ Admin ያነጋግሩ።" },
       { q: "ስርዓቱ ቀርፋፋ ነው ወይም አይጫናም።",                            a: "ኢንተርኔት ያረጋግጡ። F5 ተጭነው ያዘምኑ። ሌላ ብሮውዘር ይሞክሩ። ካልሰራ IT ያነጋግሩ።" },
     ],
 
     glossaryTitle: "የቃላት ማብራሪያ",
     glossaryItems: [
-      { term: "BP ቁጥር",      def: "Business Partner — ለእያንዳንዱ ደንበኛ ልዩ ውስጣዊ የማህደር ማጣቀሻ።" },
-      { term: "CA ቁጥር",      def: "Customer Account — በሂሳብ ደረሰኝ ላይ ያለ ቁጥር፣ ለደንበኞቹ ይታወቃቸዋል።" },
-      { term: "ተቋም",         def: "ቅርንጫፍ ወይም ቢሮ — የማህደሩ ተዋረድ ላይ ደረጃ ነው።" },
-      { term: "መደርደሪያ",     def: "ፊዚካዊ ማከማቻ ክፍል — ብዙ ረድፎቹ ይዟል።" },
-      { term: "ረድፍ",         def: "አግዳሚ ደረጃ — በ BP/CA ቁጥር ክልል የሰፈሩ።" },
-      { term: "ፎልደር",        def: "አንድ ደንበኛ የሚይዝ ፊዚካዊ ፎልደር — ንዑስ ቁጥር ክልል አለው።" },
+      { term: "BP ቁጥር",      def: "Business Partner ለእያንዳንዱ ደንበኛ ልዩ ውስጣዊ የማህደር ማጣቀሻ።" },
+      { term: "CA ቁጥር",      def: "Customer Account በሂሳብ ደረሰኝ ላይ ያለ ቁጥር፣ ለደንበኞቹ ይታወቃቸዋል።" },
+      { term: "ተቋም",         def: "ቅርንጫፍ ወይም ቢሮ የማህደሩ ተዋረድ ላይ ደረጃ ነው።" },
+      { term: "መደርደሪያ",     def: "ፊዚካዊ ማከማቻ ክፍል ብዙ ረድፎቹ ይዟል።" },
+      { term: "ረድፍ",         def: "አግዳሚ ደረጃ በ BP/CA ቁጥር ክልል የሰፈሩ።" },
+      { term: "ፎልደር",        def: "አንድ ደንበኛ የሚይዝ ፊዚካዊ ፎልደር ንዑስ ቁጥር ክልል አለው።" },
       { term: "ይገኛል",        def: "ፋይሉ በተዘረዘረው ቦታ ላይ ባለ መደርደሪያ ውስጥ ነው።" },
       { term: "ተዋሷል",        def: "ፋይሉ ወጥቷል። ብዳሪው ስምና ቀን ይመዘገባሉ።" },
       { term: "ጠፍቷል",        def: "ፋይሉ ሊገኝ አልቻለም። ሪፖርት ይሰራሉ።" },
       { term: "ተበላሽቷል",      def: "ፋይሉ ይገኛል ግን ሁኔታው ደካማ ነው።" },
-      { term: "QR ኮድ",       def: "ፎልደሮች ላይ ያለ ስኩዌር ኮድ — በስልክ ሊስካን ይቻላል።" },
+      { term: "QR ኮድ",       def: "ፎልደሮች ላይ ያለ ስኩዌር ኮድ በስልክ ሊስካን ይቻላል።" },
       { term: "የማህደር ሰራተኛ", def: "ፋይሎችን ሙሉ ፍቃድ ሆኖ ማስተዳደር የሚችሉ ተጠቃሚ።" },
-      { term: "ተመልካች",      def: "መረጃ ብቻ ማየት የሚችሉ ተጠቃሚ — ለውጦች አይፈቀዱም።" },
+      { term: "ተመልካች",      def: "መረጃ ብቻ ማየት የሚችሉ ተጠቃሚ ለውጦች አይፈቀዱም።" },
       { term: "Admin",        def: "ሌሎቹ ተጠቃሚዎቹ ሒሳቦቻቸውን እና ሚናዎቻቸውን ማስተዳደር የሚችሉ ተጠቃሚ።" },
       { term: "ዳሽቦርድ",      def: "ከገቡ በኋላ የሚታዩት ዋናው ገጽ።" },
-      { term: "ቅፅ ታሪክ",     def: "ስርዓቱ ውስጥ የተደረጉ ሁሉም እርምጃዎች ዝርዝር — ወዲያው ይመዘገባሉ።" },
+      { term: "ቅፅ ታሪክ",     def: "ስርዓቱ ውስጥ የተደረጉ ሁሉም እርምጃዎች ዝርዝር ወዲያው ይመዘገባሉ።" },
     ],
   },
 };
