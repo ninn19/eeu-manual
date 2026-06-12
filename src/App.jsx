@@ -44,7 +44,7 @@ export default function App() {
             <span className={styles.footerDot}>·</span>
             <span>EEU Portal <a href="https://www.eeu.gov.et" target="_blank" rel="noopener noreferrer">www.eeu.gov.et</a></span>
             <span className={styles.footerDot}>·</span>
-            <span>Internal use only</span>
+            <span>© 2026 Ethiopian Electric Utility. All rights reserved. Internal Use Only.</span>
           </div>
         </footer>
       </main>

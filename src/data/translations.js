@@ -97,7 +97,10 @@ export const translations = {
         warning: "Closing the browser without logging out leaves your session open on shared computers.",
       },
     ],
-    screenshotLoginLabel: "Screenshot Login screen",
+    rolesTableNote: "User management (creating accounts, changing roles) is restricted to Admins only.",
+    videoLabel: "Introduction Video",
+    videoSub:   "A 2-minute overview of the EEU Archive System",
+
 
     // ── Find File ─────────────────────────────────────────────────────────────
     findTitle: "Find a File",
@@ -248,7 +251,7 @@ export const translations = {
     videoTrackSub:  "Borrow, return, mark missing, and mark damaged",
 
     // ── Storage ───────────────────────────────────────────────────────────────
-    storageTitle: "Storage & QR Codes",
+    storageTitle: "Storage",
     storageIntro: "Storage follows a 4-level hierarchy. Each folder holds one customer's documents. Archive Staff only.",
     storageHierarchy: [
       { label: "Institution", sub: "Branch or office" },
@@ -268,16 +271,16 @@ export const translations = {
         tip: null,
         warning: "Rows are labelled with BP/CA number ranges (e.g. AD1000–AD1100). Set these ranges carefully, they are how staff know which row to look in without opening the system.",
       },
-      {
-        title: "Generate and print a QR code",
-        body: "Open a folder's detail page and click Generate QR Code. Print it and stick it on the physical folder. Any staff member can scan the sticker with a phone camera to instantly open that folder's record.",
-        tip: "Laminate QR stickers on high-traffic folders. A torn or dirty sticker cannot be scanned.",
-        warning: null,
-      },
+      // {
+      //   title: "Generate and print a QR code",
+      //   body: "Open a folder's detail page and click Generate QR Code. Print it and stick it on the physical folder. Any staff member can scan the sticker with a phone camera to instantly open that folder's record.",
+      //   tip: "Laminate QR stickers on high-traffic folders. A torn or dirty sticker cannot be scanned.",
+      //   warning: null,
+      // },
     ],
     screenshotStorageLabel: "Screenshot Storage hierarchy view",
-    videoStorageLabel: "Storage & QR Codes Walkthrough",
-    videoStorageSub:  "Navigate the hierarchy and generate QR codes",
+    videoStorageLabel: "Storage Walkthrough",
+    videoStorageSub:  "Navigate the hierarchy",
 
     // ── FAQ ───────────────────────────────────────────────────────────────────
     faqTitle: "Frequently Asked Questions",

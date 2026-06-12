@@ -32,7 +32,11 @@ function OverviewSection() {
       <h3 className={styles.subHeading}>{t.rolesTableTitle}</h3>
       <InfoTable headers={t.rolesTable.headers} rows={t.rolesTable.rows} />
       <Callout type="info">{t.rolesTableNote}</Callout>
-      <VideoPlaceholder label={t.videoLabel} sub={t.videoSub} />
+      <VideoPlaceholder
+        label={t.videoLabel}
+        sub={t.videoSub}
+        youtubeUrl="https://www.youtube.com/embed/p6_kUfgrV3U?si=Ds_6h1lTx0JI8MSH"
+      />
     </Sec>
   );
 }
@@ -49,7 +53,9 @@ function LoginSection() {
             tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
-      <ScreenshotPlaceholder label={t.screenshotLoginLabel} />
+      <VideoPlaceholder label={t.videoLabel} sub={t.videoSub} 
+      youtubeUrl="https://www.youtube.com/embed/fz0kChzBBFw?si=e9Fom6eqKfucqPLk"
+      ></VideoPlaceholder>
     </Sec>
   );
 }
@@ -68,12 +74,11 @@ function FindSection() {
       </div>
       <h3 className={styles.subHeading}>{t.statusTableTitle}</h3>
       <InfoTable headers={t.statusTable.headers} rows={t.statusTable.rows} />
-      <ScreenshotPlaceholder label={t.screenshotFindLabel} />
-      <VideoPlaceholder label={t.videoFindLabel} sub={t.videoFindSub} />
+      {/* <ScreenshotPlaceholder label={t.screenshotFindLabel} /> */}
+      <VideoPlaceholder label={t.videoFindLabel} sub={t.videoFindSub} youtubeUrl="https://www.youtube.com/embed/Z7sShZNPvys?si=3ETkiVy3J8Ve59FS" />
     </Sec>
   );
 }
-
 /* ── Add File ── */
 function AddSection() {
   const { t } = useApp();
@@ -86,8 +91,10 @@ function AddSection() {
             tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
-      <ScreenshotPlaceholder label={t.screenshotAddLabel} />
-      <VideoPlaceholder label={t.videoAddLabel} sub={t.videoAddSub} />
+      {/* <ScreenshotPlaceholder label={t.screenshotAddLabel} /> */}
+      <VideoPlaceholder label={t.videoAddLabel} sub={t.videoAddSub} 
+      youtubeUrl="https://www.youtube.com/embed/_rhoo-H6Hko?si=2HwEXHio6UqOF6YH"
+      />
     </Sec>
   );
 }
@@ -104,8 +111,10 @@ function UpdateSection() {
             tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
-      <ScreenshotPlaceholder label={t.screenshotUpdateLabel} />
-      <VideoPlaceholder label={t.videoUpdateLabel} sub={t.videoUpdateSub} />
+      {/* <ScreenshotPlaceholder label={t.screenshotUpdateLabel} /> */}
+      <VideoPlaceholder label={t.videoUpdateLabel} sub={t.videoUpdateSub} 
+      youtubeUrl="https://www.youtube.com/embed/O6jNZg5uf80?si=GFv73bk2L7AItLyC"
+      />
     </Sec>
   );
 }
@@ -137,8 +146,10 @@ function TrackingSection() {
             tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
-      <ScreenshotPlaceholder label={t.screenshotTrackLabel} />
-      <VideoPlaceholder label={t.videoTrackLabel} sub={t.videoTrackSub} />
+      {/* <ScreenshotPlaceholder label={t.screenshotTrackLabel} /> */}
+      <VideoPlaceholder label={t.videoTrackLabel} sub={t.videoTrackSub} 
+      youtubeUrl="https://www.youtube.com/embed/6X5tN4NZC6c?si=Yf-fOHCwFbJpHJJ-"
+      />
     </Sec>
   );
 }
@@ -169,8 +180,10 @@ function StorageSection() {
             tip={s.tip} warning={s.warning} defaultOpen={i === 0} />
         ))}
       </div>
-      <ScreenshotPlaceholder label={t.screenshotStorageLabel} />
-      <VideoPlaceholder label={t.videoStorageLabel} sub={t.videoStorageSub} />
+      {/* <ScreenshotPlaceholder label={t.screenshotStorageLabel} /> */}
+      <VideoPlaceholder label={t.videoStorageLabel} sub={t.videoStorageSub} 
+      youtubeUrl="https://www.youtube.com/embed/DKl5-hy7wsQ?si=4Xh-R6PiZTTStlc1"
+      />
     </Sec>
   );
 }
